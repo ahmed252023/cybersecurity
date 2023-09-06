@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="header">
+    <div class="button-group">
+      <button class="btn btn-primary" (click)="goBack()">Back</button>
+      <!-- <img src="app/Loading_icon.gif" /> -->
+    </div>
+    
+    <h2>Modern DNS Tester</h2>
+  </div>
+  
+  <div class="form-group">
+    <label for="domain">Domain:</label>
+    <input type="text" id="domain" [(ngModel)]="domain" placeholder="Enter the domain">
+  </div>
+
+  <div class="form-group">
+    <label for="path">List :</label>
+    <input type="text" id="path" [(ngModel)]="path" placeholder="Enter the list">
+  </div>
+
+  <div class="button-group">
+    <button class="btn btn-primary" (click)="testdns()">Test DNS </button>
+    <!-- <img src="app/Loading_icon.gif" /> -->
+  </div>
+
+
+
+  <div class="button-group">
+    <button class="btn btn-primary" (click)="bruteforce()">DNS Bruteforce</button>
+  </div>
+
+  <!-- <div class="button-group">
+    <button class="btn btn-primary" (click)="GetEmail()">GetEmail </button>
+  </div> -->
+
+  <div class="output">
+    <h4>Output:</h4>
+    <pre>{{ output }}</pre>
+  </div>
+</div>

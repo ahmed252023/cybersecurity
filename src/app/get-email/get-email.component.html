@@ -1,0 +1,57 @@
+<div class="container mt-4" >
+  
+  <div class="button-group">
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+  </div>
+
+  <div class="form-group">
+    <label for="domain">Domain:</label>
+    <input type="text" id="domain" [(ngModel)]="domain" placeholder="Enter the domain">
+  </div>
+
+  <div class="button-group">
+    <button class="btn btn-primary" (click)="GetEmail()">Get Emails</button>
+    <!-- <img src="app/Loading_icon.gif" /> -->
+  </div>
+ 
+    <div class="card">
+            <h1>Email Liste</h1>
+     
+    
+    </div>
+    <div>
+     
+     
+        <div class="container mt-4" >
+     
+            <h1>Email Table</h1>
+     
+     
+     
+     
+        <table class="table">
+            <thead>
+             <h1 *ngIf="!isResultLoaded"></h1>
+            
+            <tr>
+                <th scope="col">Emails</th>
+                
+                
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let EmailItem of EmailArray">
+     
+                <th scope="row">{{EmailItem }}</th>
+                
+                
+               
+              </tr>
+              
+            </tbody>
+          </table>
+     
+     
+        </div>
+    </div>
+</div>
