@@ -23,7 +23,7 @@ public class EmailService {
 
     public static List<String> getEmailAddresses(String domain) {
         List<String> emailAddresses = new ArrayList<String>();
-        String url = String.format("https://api.hunter.io/v2/domain-search?domain=%s&api_key=8d7c28369d70cbcc274e8fff2117072e2a5c2220", domain);
+        String url = String.format("https://api.hunter.io/v2/domain-search?domain=%s&api_key=ADD YOUR API FROM HUNTER.IO", domain);
         
         try {
             HttpClient client = HttpClient.newHttpClient();
