@@ -36,49 +36,9 @@ public class DnsReconService {
  
     
   public String testdns(String domain) {
-    	
-//    	public static List<String> testdns(String domain) {
-//            List<String> testdns = new ArrayList<String>();
-//            String[] command= {
-//                  "/bin/sh",
-//                  "-c",
-//                  
-//                  "echo " + "'Test Zone Transfer'"+";"+
-//                  "dnsrecon -d "+ domain +" -t axfr | grep -E 'Zone Transfer'" +" ; "+
-//                  "echo " + "'Test Records'"+";"+
-//                  "dnsrecon -d " + domain + " -t " + "std" + " | grep -E 'DNSSEC| NS| MX | TXT | SOA | A | AAAA'" +" ; "+
-//                  "echo " + "'Test DMARC'"+";"+
-//                   
-//                  "nslookup " + " -type=txt " + "_dmarc. " + domain +" ; "+
-//                  
-//					"echo " + "'Test SPF'"+";"+
-//                  "nslookup " + "-type=txt " + domain +"| grep -E 'Server:|Address:|v='"
-//              };
-//            try {
-//                HttpClient client = HttpClient.newHttpClient();
-//                HttpRequest request = HttpRequest.newBuilder()
-//                		
-//                       //.uri(URI.create((command)))
-//                       .build();
-//                
-//                HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-//                JSONObject data = new JSONObject(response.body());
-//                // Vérifiez si la requête a réussi
-//                if (response.statusCode() == 200) {
-//                    JSONArray test = data.getJSONObject("data").getJSONArray("test");
-//                    for (int i = 0; i < test.length(); i++) {
-//                    	testdns.add(test.getJSONObject(i).getString("value"));
-//                    }
-//                }
-//            } catch (IOException | InterruptedException | JSONException e) {
-//                System.err.println("Une erreur s'est produite lors de la requête : " + e.getMessage());
-//            }
-//
-//            return testdns;
-//        } 
         try {
         	
-        	 //String command = "dnsrecon -d " + domain + " -t " + "std" + "| grep -E 'DNSSEC| NS| MX | TXT | SOA | A | AAAA'" ;
+        	 
         	String[] command = {
                     "/bin/sh",
                     "-c",
